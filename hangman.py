@@ -1,14 +1,5 @@
 # VARIABLES AND FUNCTIONS:
 
-hangman = [] #  empty list for the secret word
-Guess = [] # empty list for player guess to avoid repetition
-word = ' ' # empty string for secret word
-emp = []  # empty list to append _ in place of letters in secret word
-exit = 0 # variable for quit game loop
-lives = 5 # player has 5 lives, game on whiles lives above 0
-players = 0 # varible for number of players, while not 1 or 2 loop continues
-
-
 def clear_screen():
     ''' PRINTS 100 NEW LINES TO CLEAR THE SCREEN '''
     print('\n' * 100 )
@@ -103,8 +94,11 @@ def random_word():
     import random
     
     global hangman        
-    hangman = ['hello','bicycle', 'uniform', 'cookie', 'laptop', 'table', 'microwave', 'playstation', 'enormous', 'password','required', 'keyboard']
-    
+    hangman = ['hello','bicycle', 'uniform', 'cookie', 'laptop', 'table', 'microwave', 
+    'playstation','enormous', 'password','required', 'keyboard', 'style', 'distance',
+    'animal', 'trousers', 'barcelona', 'pancake', 'coffee', 'fridge', 'venezuela', 
+    'glasses', 'random', 'purple', 'tenerife', 'jamaica', 'monkey','beautiful']
+          
     global word
     word = random.choice(hangman) # chooses random word from above list
     hangman = list(word)
@@ -240,7 +234,13 @@ def two_player():
  # THE GAME BELOW 
                    
 while True:  # Loop to continue unless exit == 1
-    
+    hangman = [] #  empty list for the secret word
+    Guess = [] # empty list for player guess to avoid repetition
+    word = ' ' # empty string for secret word
+    emp = []  # empty list to append _ in place of letters in secret word
+    exit = 0 # variable for quit game loop
+    lives = 5 # player has 5 lives, game on whiles lives above 0
+    players = 0 # varible for number of players, while not 1 or 2 loop continues
     
     seperator() # seperates guesses 
 
